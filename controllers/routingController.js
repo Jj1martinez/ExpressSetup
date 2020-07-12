@@ -8,7 +8,7 @@ async function verifyJwt(autorization, res) {
     const token = authHeader && authHeader.split(" ")[1];
     if (token == null) return res.status(403).send({ msg: "Inicie Sesion" });
     try {
-        const info = await jwt.verify(token, secretKey);
+        const info = jwt.verify(token, secretKey);
         const user = await User.findByPk(info.id);
         return user;
     } catch (error) {
