@@ -1,11 +1,8 @@
-const classroom = require('./classroom');
-const student = require('./student');
-const lecturer = require('./lecturer');
-const course = require('./course');
+const userController = require('./userController');
+const routingController = require('./routingController');
+
 
 module.exports = {
-  classroom,
-  student,
-  lecturer,
-  course,
+  userController,
+  routingController
 };
